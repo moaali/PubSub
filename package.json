@@ -1,0 +1,39 @@
+{
+  "name": "javascript-pubsub",
+  "version": "0.1.0",
+  "description": "Javascript implementation of the Publish/Subscribe pattern",
+  "main": "lib/PubSub.js",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moaali/javascript-pubsub.git"
+  },
+  "keywords": [
+    "Publish",
+    "Subscribe"
+  ],
+  "author": "Mo Ali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moaali/javascript-pubsub/issues"
+  },
+  "homepage": "https://github.com/moaali/javascript-pubsub",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.13.1",
+    "eslint-loader": "^1.9.0",
+    "webpack": "^3.10.0",
+    "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

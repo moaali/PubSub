@@ -1,26 +1,26 @@
 ### PubSub
 
-Dependency free Javascript implementation of the Publish/Subscribe pattern with wildcards, namespaces.
+Dependency free Javascript implementation of the Publish/Subscribe design pattern.
 
 
 ### Example Usages
 ```javascript
-let fn1 = data => { console.log(`${data} from fn1`) }
-let fn2 = data => { console.log(`${data} from fn2`) }
-let fn2 = data => { console.log(`${data} from fn3`) }
+const fn1 = data => { console.log(`${data} from fn1`) }
+const fn2 = data => { console.log(`${data} from fn2`) }
+const fn3 = data => { console.log(`${data} from fn3`) }
 
-PubSub.subscribe(['player.play', 'player.rest'], fn1);
-PubSub.subscribe('player', fn2);
-PubSub.subscribe('player.out', fn3);
+PubSub.subscribe('FUNCTIONS', fn1);
+PubSub.subscribe('FUNCTIONS', fn2);
+PubSub.subscribe('FUNCTIONS', fn3);
 
-PubSub.publish('player', 'hello');
+PubSub.publish('FUNCTIONS', 'Hello');
 // => Hello from fn1
 // => Hello from fn2
 // => Hello from fn3
 
-PubSub.unsubscribe('player.out', fn3);
+PubSub.unsubscribe('FUNCTIONS', 'fn3');
 
-PubSub.publish('player', 'hello');
+PubSub.publish('FUNCTIONS', 'Hello');
 // => Hello from fn1
 // => Hello from fn2
 ```
